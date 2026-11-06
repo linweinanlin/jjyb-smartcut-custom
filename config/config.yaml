@@ -1,0 +1,41 @@
+# JJYB_AI智剪 配置文件
+
+app:
+  # 个人改造入口：可在这里替换应用名称和副标题。
+  # 请保留下方 attribution，遵守上游个人使用许可。
+  name: 我的 AI 视频工作室
+  subtitle: 本地优先的个人视频创作工具
+  attribution: 基于 JJYB_AI_VideoAutoCut 改造
+  version: 3.3.3
+  debug: false
+  host: 0.0.0.0
+  port: 5000
+
+database:
+  type: sqlite
+  path: database/jjyb_ai.db
+
+ffmpeg:
+  path: ffmpeg
+  threads: 4
+
+ai:
+  device: cuda  # cuda or cpu
+  models_dir: models
+
+tts:
+  default_engine: pyttsx3
+  voice: zh-CN-XiaoxiaoNeural
+  rate: +0%
+  volume: +0%
+
+asr:
+  default_engine: whisper
+  model: base
+  language: zh
+
+logging:
+  level: INFO
+  file: logs/app.log
+  max_size: 10485760  # 10MB
+  backup_count: 5

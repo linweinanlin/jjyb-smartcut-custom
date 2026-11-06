@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.log
+logs/
+# 运行时数据与素材
+uploads/
+output/
+outputs/
+temp/
+models/
+database/
+*.db
+*.sqlite
+*.sqlite3
+*.pt
+*.onnx
+*.mp4
+*.mp3
+*.wav
+config/ai_config.json
+.env
